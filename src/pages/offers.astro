@@ -1,0 +1,338 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Special Offers - Lapx Laptops">
+	<Header />
+	
+	<main>
+		<section class="offers-hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1>Special Offers & Deals</h1>
+					<p>Limited time offers on premium laptops with massive savings</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="offers-section">
+			<div class="container">
+				<div class="offers-grid">
+					<div class="offer-card featured">
+						<div class="offer-badge">MEGA DEAL</div>
+						<div class="offer-content">
+							<h3>Gaming Laptop Festival</h3>
+							<p class="offer-description">Get up to ₹15,000 cashback on gaming laptops + Free gaming accessories worth ₹5,000</p>
+							<div class="offer-details">
+								<div class="discount">Up to ₹20,000 OFF</div>
+								<div class="validity">Valid till: 31st March 2025</div>
+							</div>
+							<button class="btn-primary">Shop Gaming Laptops</button>
+						</div>
+						<div class="offer-image">
+							<img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" alt="Gaming Laptop" />
+						</div>
+					</div>
+
+					<div class="offer-card">
+						<div class="offer-content">
+							<h3>Student Special</h3>
+							<p class="offer-description">Extra 10% discount for students with valid ID + Free Microsoft Office</p>
+							<div class="offer-details">
+								<div class="discount">Extra 10% OFF</div>
+								<div class="validity">All Year Round</div>
+							</div>
+							<button class="btn-secondary">Learn More</button>
+						</div>
+						<div class="offer-image">
+							<img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" alt="Student Laptop" />
+						</div>
+					</div>
+
+					<div class="offer-card">
+						<div class="offer-content">
+							<h3>Trade-In Bonus</h3>
+							<p class="offer-description">Extra ₹5,000 on your old laptop trade-in value when you buy a new one</p>
+							<div class="offer-details">
+								<div class="discount">₹5,000 Extra</div>
+								<div class="validity">Valid till: 30th April 2025</div>
+							</div>
+							<button class="btn-secondary">Get Quote</button>
+						</div>
+						<div class="offer-image">
+							<img src="https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" alt="Trade-in Laptop" />
+						</div>
+					</div>
+
+					<div class="offer-card">
+						<div class="offer-content">
+							<h3>Extended Warranty</h3>
+							<p class="offer-description">Get 3 years comprehensive warranty at the price of 2 years</p>
+							<div class="offer-details">
+								<div class="discount">1 Year Free</div>
+								<div class="validity">Limited Time</div>
+							</div>
+							<button class="btn-secondary">View Plans</button>
+						</div>
+						<div class="offer-image">
+							<img src="https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" alt="Warranty" />
+						</div>
+					</div>
+
+					<div class="offer-card">
+						<div class="offer-content">
+							<h3>EMI at 0%</h3>
+							<p class="offer-description">No cost EMI up to 12 months on selected laptops with major credit cards</p>
+							<div class="offer-details">
+								<div class="discount">0% Interest</div>
+								<div class="validity">12 Months EMI</div>
+							</div>
+							<button class="btn-secondary">Check Eligibility</button>
+						</div>
+						<div class="offer-image">
+							<img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" alt="EMI" />
+						</div>
+					</div>
+
+					<div class="offer-card">
+						<div class="offer-content">
+							<h3>Bulk Purchase</h3>
+							<p class="offer-description">Special corporate rates for bulk purchases (10+ laptops) with volume discounts</p>
+							<div class="offer-details">
+								<div class="discount">Volume Discount</div>
+								<div class="validity">Corporate Only</div>
+							</div>
+							<button class="btn-secondary">Contact Sales</button>
+						</div>
+						<div class="offer-image">
+							<img src="https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" alt="Corporate" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="offer-terms">
+			<div class="container">
+				<div class="terms-content">
+					<h2>Terms & Conditions</h2>
+					<ul>
+						<li>All offers are subject to availability and may be withdrawn without prior notice</li>
+						<li>Offers cannot be combined with other promotions unless specifically mentioned</li>
+						<li>Student discount requires valid student ID and enrollment certificate</li>
+						<li>Trade-in value depends on the condition and model of your old laptop</li>
+						<li>EMI offers are subject to bank approval and terms</li>
+						<li>Extended warranty terms apply as per manufacturer guidelines</li>
+						<li>Corporate discounts require minimum purchase quantities</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		padding-top: 72px;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	.offers-hero {
+		background: linear-gradient(135deg, #f59e0b, #d97706);
+		color: white;
+		padding: 60px 0;
+		text-align: center;
+	}
+
+	.hero-content h1 {
+		font-size: 42px;
+		font-weight: 700;
+		margin: 0 0 16px 0;
+	}
+
+	.hero-content p {
+		font-size: 18px;
+		opacity: 0.9;
+		margin: 0;
+	}
+
+	.offers-section {
+		padding: 60px 0;
+		background: #f9fafb;
+	}
+
+	.offers-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 32px;
+	}
+
+	.offer-card {
+		background: white;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+		transition: all 0.3s ease;
+		position: relative;
+		border: 1px solid #e5e7eb;
+	}
+
+	.offer-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+	}
+
+	.offer-card.featured {
+		border: 2px solid #f59e0b;
+		transform: scale(1.02);
+	}
+
+	.offer-badge {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		background: linear-gradient(135deg, #dc2626, #ef4444);
+		color: white;
+		padding: 8px 16px;
+		border-radius: 20px;
+		font-size: 12px;
+		font-weight: 700;
+		z-index: 2;
+		animation: pulse 2s infinite;
+	}
+
+	.offer-content {
+		padding: 32px;
+	}
+
+	.offer-content h3 {
+		font-size: 24px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 12px 0;
+	}
+
+	.offer-description {
+		color: #4b5563;
+		line-height: 1.6;
+		margin: 0 0 24px 0;
+	}
+
+	.offer-details {
+		margin-bottom: 24px;
+	}
+
+	.discount {
+		font-size: 20px;
+		font-weight: 700;
+		color: #dc2626;
+		margin-bottom: 4px;
+	}
+
+	.validity {
+		font-size: 14px;
+		color: #6b7280;
+	}
+
+	.offer-image {
+		height: 200px;
+		overflow: hidden;
+		background: #f3f4f6;
+	}
+
+	.offer-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.btn-primary,
+	.btn-secondary {
+		padding: 12px 24px;
+		border-radius: 8px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		border: none;
+		font-size: 14px;
+		width: 100%;
+	}
+
+	.btn-primary {
+		background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+		color: white;
+	}
+
+	.btn-primary:hover {
+		background: linear-gradient(135deg, #1e40af, #2563eb);
+		transform: translateY(-2px);
+	}
+
+	.btn-secondary {
+		background: white;
+		color: #1e3a8a;
+		border: 2px solid #1e3a8a;
+	}
+
+	.btn-secondary:hover {
+		background: #1e3a8a;
+		color: white;
+	}
+
+	.offer-terms {
+		padding: 60px 0;
+		background: white;
+	}
+
+	.terms-content h2 {
+		font-size: 28px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 24px 0;
+		text-align: center;
+	}
+
+	.terms-content ul {
+		max-width: 800px;
+		margin: 0 auto;
+		padding-left: 24px;
+	}
+
+	.terms-content li {
+		color: #4b5563;
+		line-height: 1.6;
+		margin-bottom: 8px;
+	}
+
+	@keyframes pulse {
+		0%, 100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.05);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 32px;
+		}
+
+		.offers-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.offer-card.featured {
+			transform: none;
+		}
+	}
+</style>

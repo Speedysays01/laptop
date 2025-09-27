@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LaptopCard from '../components/LaptopCard.astro';
+
+const allLaptops = [
+	{
+		name: "Gaming Pro X15",
+		brand: "TechForce",
+		image: "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 89999,
+		originalPrice: 99999,
+		specs: ["Intel i7-12700H", "RTX 4060 8GB", "16GB DDR5 RAM", "1TB SSD"],
+		badge: "Best Seller"
+	},
+	{
+		name: "UltraBook Air",
+		brand: "SlimTech",
+		image: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 64999,
+		specs: ["Intel i5-1240P", "Intel Iris Xe", "8GB LPDDR5", "512GB SSD"],
+		badge: "Ultra Thin"
+	},
+	{
+		name: "Business Elite",
+		brand: "ProWork",
+		image: "https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 74999,
+		originalPrice: 84999,
+		specs: ["AMD Ryzen 7", "Radeon Graphics", "16GB DDR4", "1TB SSD"],
+		badge: "Professional"
+	},
+	{
+		name: "Gaming Beast RTX",
+		brand: "PowerMax",
+		image: "https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 124999,
+		specs: ["Intel i9-13900H", "RTX 4070 8GB", "32GB DDR5", "2TB SSD"],
+		badge: "High Performance"
+	},
+	{
+		name: "Student Special",
+		brand: "EduTech",
+		image: "https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 39999,
+		originalPrice: 45999,
+		specs: ["AMD Ryzen 5", "Radeon Graphics", "8GB DDR4", "512GB SSD"],
+		badge: "Budget Friendly"
+	},
+	{
+		name: "Creator Pro",
+		brand: "DesignMax",
+		image: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 109999,
+		specs: ["Intel i7-13700H", "RTX 4050 6GB", "32GB DDR5", "1TB SSD"],
+		badge: "For Creators"
+	}
+];
+---
+
+<Layout title="All Products - Lapx Laptops">
+	<Header />
+	
+	<main>
+		<section class="products-hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1>All Laptops</h1>
+					<p>Discover our complete range of premium laptops for every need and budget</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="products-section">
+			<div class="container">
+				<div class="filters-section">
+					<div class="filter-group">
+						<label for="category">Category:</label>
+						<select id="category">
+							<option value="all">All Categories</option>
+							<option value="gaming">Gaming</option>
+							<option value="business">Business</option>
+							<option value="ultrabook">Ultrabook</option>
+							<option value="budget">Budget</option>
+						</select>
+					</div>
+					<div class="filter-group">
+						<label for="brand">Brand:</label>
+						<select id="brand">
+							<option value="all">All Brands</option>
+							<option value="techforce">TechForce</option>
+							<option value="slimtech">SlimTech</option>
+							<option value="prowork">ProWork</option>
+							<option value="powermax">PowerMax</option>
+						</select>
+					</div>
+					<div class="filter-group">
+						<label for="price">Price Range:</label>
+						<select id="price">
+							<option value="all">All Prices</option>
+							<option value="under50k">Under ₹50,000</option>
+							<option value="50k-75k">₹50,000 - ₹75,000</option>
+							<option value="75k-100k">₹75,000 - ₹1,00,000</option>
+							<option value="above100k">Above ₹1,00,000</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="products-grid">
+					{allLaptops.map(laptop => (
+						<LaptopCard {...laptop} />
+					))}
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		padding-top: 72px;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	.products-hero {
+		background: linear-gradient(135deg, #1f2937, #374151);
+		color: white;
+		padding: 60px 0;
+		text-align: center;
+	}
+
+	.hero-content h1 {
+		font-size: 42px;
+		font-weight: 700;
+		margin: 0 0 16px 0;
+	}
+
+	.hero-content p {
+		font-size: 18px;
+		opacity: 0.9;
+		margin: 0;
+	}
+
+	.products-section {
+		padding: 60px 0;
+		background: #f9fafb;
+	}
+
+	.filters-section {
+		display: flex;
+		gap: 24px;
+		margin-bottom: 48px;
+		padding: 24px;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+		flex-wrap: wrap;
+	}
+
+	.filter-group {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.filter-group label {
+		font-weight: 600;
+		color: #1f2937;
+		font-size: 14px;
+	}
+
+	.filter-group select {
+		padding: 12px 16px;
+		border: 2px solid #e5e7eb;
+		border-radius: 8px;
+		font-size: 14px;
+		background: white;
+		cursor: pointer;
+		transition: border-color 0.3s ease;
+		min-width: 160px;
+	}
+
+	.filter-group select:focus {
+		outline: none;
+		border-color: #3b82f6;
+	}
+
+	.products-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 32px;
+	}
+
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 32px;
+		}
+
+		.filters-section {
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		.filter-group {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.filter-group select {
+			min-width: 200px;
+		}
+
+		.products-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

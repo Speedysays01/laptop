@@ -1,0 +1,46 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Lapx - Premium Laptops in Indore. Best deals on gaming laptops, business laptops, and ultrabooks with warranty and buy-back options." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html {
+		font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100vh;
+		background: #fafafa;
+		color: #1f2937;
+		line-height: 1.6;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+</style>

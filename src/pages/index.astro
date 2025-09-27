@@ -1,0 +1,463 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LaptopCard from '../components/LaptopCard.astro';
+
+const featuredLaptops = [
+	{
+		name: "Gaming Pro X15",
+		brand: "TechForce",
+		image: "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 89999,
+		originalPrice: 99999,
+		specs: ["Intel i7-12700H", "RTX 4060 8GB", "16GB DDR5 RAM", "1TB SSD"],
+		badge: "Best Seller"
+	},
+	{
+		name: "UltraBook Air",
+		brand: "SlimTech",
+		image: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 64999,
+		specs: ["Intel i5-1240P", "Intel Iris Xe", "8GB LPDDR5", "512GB SSD"],
+		badge: "Ultra Thin"
+	},
+	{
+		name: "Business Elite",
+		brand: "ProWork",
+		image: "https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=2",
+		price: 74999,
+		originalPrice: 84999,
+		specs: ["AMD Ryzen 7", "Radeon Graphics", "16GB DDR4", "1TB SSD"],
+		badge: "Professional"
+	}
+];
+---
+
+<Layout title="Lapx - Premium Laptops in Indore | Best Deals & Buy Back">
+	<Header />
+	
+	<main>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<div class="hero-text">
+						<h1>Premium Laptops in <span class="highlight">Indore</span></h1>
+						<p>Discover the latest gaming laptops, ultrabooks, and business machines with unbeatable prices, warranty, and buy-back guarantee.</p>
+						<div class="hero-buttons">
+							<a href="/products" class="btn-primary">Shop Now</a>
+							<a href="/offers" class="btn-secondary">View Offers</a>
+						</div>
+					</div>
+					<div class="hero-image">
+						<img src="https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Premium Gaming Laptop" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features">
+			<div class="container">
+				<div class="features-grid">
+					<div class="feature">
+						<div class="feature-icon">🚚</div>
+						<h3>Free Delivery</h3>
+						<p>Free delivery within Indore city limits on orders above ₹25,000</p>
+					</div>
+					<div class="feature">
+						<div class="feature-icon">🔧</div>
+						<h3>Expert Support</h3>
+						<p>Professional technical support and maintenance services</p>
+					</div>
+					<div class="feature">
+						<div class="feature-icon">↩️</div>
+						<h3>Buy Back Guarantee</h3>
+						<p>Best buy-back value for your old laptops with instant quotes</p>
+					</div>
+					<div class="feature">
+						<div class="feature-icon">🛡️</div>
+						<h3>Extended Warranty</h3>
+						<p>Comprehensive warranty coverage with on-site support</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Featured Products -->
+		<section class="featured-products">
+			<div class="container">
+				<div class="section-header">
+					<h2>Featured Laptops</h2>
+					<p>Hand-picked premium laptops with the best performance and value</p>
+				</div>
+				<div class="products-grid">
+					{featuredLaptops.map(laptop => (
+						<LaptopCard {...laptop} />
+					))}
+				</div>
+				<div class="section-cta">
+					<a href="/products" class="btn-primary">View All Products</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Offers Banner -->
+		<section class="offers-banner">
+			<div class="container">
+				<div class="offer-content">
+					<div class="offer-text">
+						<h2>Limited Time Offer!</h2>
+						<p>Get up to ₹15,000 cashback + extended warranty on gaming laptops</p>
+						<a href="/offers" class="btn-white">View All Offers</a>
+					</div>
+					<div class="offer-image">
+						<img src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2" alt="Gaming Setup" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us -->
+		<section class="why-choose-us">
+			<div class="container">
+				<div class="section-header">
+					<h2>Why Choose Lapx?</h2>
+					<p>Your trusted laptop partner in Indore</p>
+				</div>
+				<div class="reasons-grid">
+					<div class="reason">
+						<h3>10+ Years Experience</h3>
+						<p>Serving Indore with premium laptops and excellent customer service since 2013</p>
+					</div>
+					<div class="reason">
+						<h3>Authorized Dealer</h3>
+						<p>Official authorized dealer for all major laptop brands with genuine products</p>
+					</div>
+					<div class="reason">
+						<h3>Best Prices</h3>
+						<p>Competitive pricing with price match guarantee and EMI options available</p>
+					</div>
+					<div class="reason">
+						<h3>After Sales Support</h3>
+						<p>Comprehensive after-sales support with service center and spare parts</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		padding-top: 72px;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	/* Hero Section */
+	.hero {
+		background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+		color: white;
+		padding: 80px 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+	}
+
+	.hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero-text h1 {
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 1.2;
+		margin: 0 0 24px 0;
+	}
+
+	.highlight {
+		background: linear-gradient(135deg, #f59e0b, #d97706);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.hero-text p {
+		font-size: 20px;
+		line-height: 1.6;
+		margin: 0 0 32px 0;
+		opacity: 0.9;
+	}
+
+	.hero-buttons {
+		display: flex;
+		gap: 16px;
+	}
+
+	.btn-primary,
+	.btn-secondary,
+	.btn-white {
+		padding: 16px 32px;
+		font-size: 16px;
+		font-weight: 600;
+		border-radius: 12px;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		display: inline-block;
+		cursor: pointer;
+		border: none;
+	}
+
+	.btn-primary {
+		background: rgba(255, 255, 255, 0.2);
+		color: white;
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+	}
+
+	.btn-primary:hover {
+		background: rgba(255, 255, 255, 0.3);
+		transform: translateY(-2px);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: white;
+		border: 2px solid rgba(255, 255, 255, 0.5);
+	}
+
+	.btn-secondary:hover {
+		background: rgba(255, 255, 255, 0.1);
+		border-color: white;
+	}
+
+	.btn-white {
+		background: white;
+		color: #1e3a8a;
+	}
+
+	.btn-white:hover {
+		background: #f8fafc;
+		transform: translateY(-2px);
+	}
+
+	.hero-image {
+		position: relative;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		border-radius: 16px;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	}
+
+	/* Features Section */
+	.features {
+		padding: 80px 0;
+		background: white;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 40px;
+	}
+
+	.feature {
+		text-align: center;
+		padding: 32px 24px;
+		border-radius: 16px;
+		transition: all 0.3s ease;
+	}
+
+	.feature:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	}
+
+	.feature-icon {
+		font-size: 48px;
+		margin-bottom: 16px;
+	}
+
+	.feature h3 {
+		font-size: 20px;
+		font-weight: 600;
+		margin: 0 0 12px 0;
+		color: #1f2937;
+	}
+
+	.feature p {
+		color: #6b7280;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Featured Products */
+	.featured-products {
+		padding: 80px 0;
+		background: #f9fafb;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	.section-header h2 {
+		font-size: 40px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 16px 0;
+	}
+
+	.section-header p {
+		font-size: 18px;
+		color: #6b7280;
+		margin: 0;
+	}
+
+	.products-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 32px;
+		margin-bottom: 48px;
+	}
+
+	.section-cta {
+		text-align: center;
+	}
+
+	.section-cta .btn-primary {
+		background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+		color: white;
+	}
+
+	.section-cta .btn-primary:hover {
+		background: linear-gradient(135deg, #1e40af, #2563eb);
+		transform: translateY(-2px);
+	}
+
+	/* Offers Banner */
+	.offers-banner {
+		background: linear-gradient(135deg, #f59e0b, #d97706);
+		color: white;
+		padding: 80px 0;
+	}
+
+	.offer-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.offer-text h2 {
+		font-size: 36px;
+		font-weight: 700;
+		margin: 0 0 16px 0;
+	}
+
+	.offer-text p {
+		font-size: 18px;
+		margin: 0 0 24px 0;
+		opacity: 0.9;
+	}
+
+	.offer-image img {
+		width: 100%;
+		height: auto;
+		border-radius: 12px;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	}
+
+	/* Why Choose Us */
+	.why-choose-us {
+		padding: 80px 0;
+		background: white;
+	}
+
+	.reasons-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 40px;
+	}
+
+	.reason {
+		padding: 32px;
+		border-radius: 16px;
+		background: #f9fafb;
+		border: 1px solid #e5e7eb;
+		transition: all 0.3s ease;
+	}
+
+	.reason:hover {
+		border-color: #3b82f6;
+		box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+	}
+
+	.reason h3 {
+		font-size: 20px;
+		font-weight: 600;
+		color: #1f2937;
+		margin: 0 0 12px 0;
+	}
+
+	.reason p {
+		color: #6b7280;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.hero-content,
+		.offer-content {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.hero-text h1 {
+			font-size: 36px;
+		}
+
+		.hero-text p {
+			font-size: 18px;
+		}
+
+		.hero-buttons {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.products-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.section-header h2 {
+			font-size: 32px;
+		}
+	}
+</style>

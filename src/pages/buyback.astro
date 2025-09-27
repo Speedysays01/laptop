@@ -1,0 +1,580 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Buy Back Program - Lapx Laptops">
+	<Header />
+	
+	<main>
+		<section class="buyback-hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1>Laptop Buy Back Program</h1>
+					<p>Get the best value for your old laptop with instant quotes and hassle-free process</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="quote-calculator">
+			<div class="container">
+				<div class="calculator-wrapper">
+					<div class="calculator-form">
+						<h2>Get Instant Quote</h2>
+						<form id="buybackForm">
+							<div class="form-group">
+								<label for="brand">Laptop Brand</label>
+								<select id="brand" required>
+									<option value="">Select Brand</option>
+									<option value="hp">HP</option>
+									<option value="dell">Dell</option>
+									<option value="lenovo">Lenovo</option>
+									<option value="asus">ASUS</option>
+									<option value="acer">Acer</option>
+									<option value="apple">Apple</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="model">Model Name</label>
+								<input type="text" id="model" placeholder="e.g., Pavilion 15, XPS 13" required>
+							</div>
+							<div class="form-group">
+								<label for="age">Age of Laptop</label>
+								<select id="age" required>
+									<option value="">Select Age</option>
+									<option value="0-1">0-1 Years</option>
+									<option value="1-2">1-2 Years</option>
+									<option value="2-3">2-3 Years</option>
+									<option value="3-4">3-4 Years</option>
+									<option value="4+">4+ Years</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="condition">Overall Condition</label>
+								<select id="condition" required>
+									<option value="">Select Condition</option>
+									<option value="excellent">Excellent (Like New)</option>
+									<option value="good">Good (Minor Wear)</option>
+									<option value="fair">Fair (Visible Wear)</option>
+									<option value="poor">Poor (Significant Damage)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="specifications">Key Specifications</label>
+								<textarea id="specifications" placeholder="e.g., Intel i5, 8GB RAM, 512GB SSD" rows="3"></textarea>
+							</div>
+							<button type="submit" class="btn-primary">Get Instant Quote</button>
+						</form>
+					</div>
+					<div class="quote-result" id="quoteResult">
+						<div class="result-content">
+							<h3>Your Estimated Quote</h3>
+							<div class="quote-amount" id="quoteAmount">₹0</div>
+							<div class="quote-range">Final quote may vary by ±₹2,000</div>
+							<div class="next-steps">
+								<h4>Next Steps:</h4>
+								<ol>
+									<li>Visit our store for physical inspection</li>
+									<li>Get final quote confirmation</li>
+									<li>Complete paperwork</li>
+									<li>Receive instant payment</li>
+								</ol>
+							</div>
+							<button class="btn-secondary">Book Appointment</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="buyback-process">
+			<div class="container">
+				<div class="section-header">
+					<h2>How Our Buy Back Works</h2>
+					<p>Simple, transparent, and hassle-free process</p>
+				</div>
+				<div class="process-steps">
+					<div class="step">
+						<div class="step-number">1</div>
+						<div class="step-content">
+							<h3>Get Quote</h3>
+							<p>Fill out our form or visit our store for an instant quote based on your laptop's condition</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-number">2</div>
+						<div class="step-content">
+							<h3>Physical Check</h3>
+							<p>Our experts inspect your laptop thoroughly to confirm the final buying price</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-number">3</div>
+						<div class="step-content">
+							<h3>Documentation</h3>
+							<p>Simple paperwork with ID proof and original purchase invoice if available</p>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-number">4</div>
+						<div class="step-content">
+							<h3>Instant Payment</h3>
+							<p>Receive payment immediately via cash, bank transfer, or adjust with your new purchase</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="buyback-benefits">
+			<div class="container">
+				<div class="benefits-grid">
+					<div class="benefit">
+						<div class="benefit-icon">💰</div>
+						<h3>Best Market Rates</h3>
+						<p>We offer the highest buy-back rates in Indore with price matching guarantee</p>
+					</div>
+					<div class="benefit">
+						<div class="benefit-icon">⚡</div>
+						<h3>Instant Process</h3>
+						<p>Complete evaluation and payment within 30 minutes at our store</p>
+					</div>
+					<div class="benefit">
+						<div class="benefit-icon">🔒</div>
+						<h3>Data Security</h3>
+						<p>Professional data wiping ensures your personal information is completely secure</p>
+					</div>
+					<div class="benefit">
+						<div class="benefit-icon">📋</div>
+						<h3>No Hidden Charges</h3>
+						<p>Transparent pricing with no deductions or processing fees</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="faq-section">
+			<div class="container">
+				<h2>Frequently Asked Questions</h2>
+				<div class="faq-grid">
+					<div class="faq-item">
+						<h3>What laptops do you buy?</h3>
+						<p>We buy all brands and models of laptops, regardless of age or condition. Even damaged laptops have value!</p>
+					</div>
+					<div class="faq-item">
+						<h3>Do I need original invoice?</h3>
+						<p>Original invoice is preferred but not mandatory. We can still evaluate and purchase your laptop without it.</p>
+					</div>
+					<div class="faq-item">
+						<h3>How is the price determined?</h3>
+						<p>Price is based on brand, model, age, condition, specifications, and current market value.</p>
+					</div>
+					<div class="faq-item">
+						<h3>Can I get extra value for upgrade?</h3>
+						<p>Yes! We offer additional ₹5,000 when you trade-in your old laptop while buying a new one.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		padding-top: 72px;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	.buyback-hero {
+		background: linear-gradient(135deg, #10b981, #059669);
+		color: white;
+		padding: 60px 0;
+		text-align: center;
+	}
+
+	.hero-content h1 {
+		font-size: 42px;
+		font-weight: 700;
+		margin: 0 0 16px 0;
+	}
+
+	.hero-content p {
+		font-size: 18px;
+		opacity: 0.9;
+		margin: 0;
+	}
+
+	.quote-calculator {
+		padding: 60px 0;
+		background: white;
+	}
+
+	.calculator-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: start;
+	}
+
+	.calculator-form h2 {
+		font-size: 28px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 32px 0;
+	}
+
+	.form-group {
+		margin-bottom: 24px;
+	}
+
+	.form-group label {
+		display: block;
+		font-weight: 600;
+		color: #1f2937;
+		margin-bottom: 8px;
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		width: 100%;
+		padding: 12px 16px;
+		border: 2px solid #e5e7eb;
+		border-radius: 8px;
+		font-size: 16px;
+		transition: border-color 0.3s ease;
+	}
+
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #3b82f6;
+	}
+
+	.btn-primary,
+	.btn-secondary {
+		padding: 16px 32px;
+		border-radius: 8px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		border: none;
+		font-size: 16px;
+		width: 100%;
+	}
+
+	.btn-primary {
+		background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+		color: white;
+	}
+
+	.btn-primary:hover {
+		background: linear-gradient(135deg, #1e40af, #2563eb);
+		transform: translateY(-2px);
+	}
+
+	.btn-secondary {
+		background: white;
+		color: #10b981;
+		border: 2px solid #10b981;
+	}
+
+	.btn-secondary:hover {
+		background: #10b981;
+		color: white;
+	}
+
+	.quote-result {
+		background: #f0fdf4;
+		border: 2px solid #10b981;
+		border-radius: 16px;
+		padding: 32px;
+		text-align: center;
+		display: none;
+	}
+
+	.quote-result.visible {
+		display: block;
+		animation: slideIn 0.5s ease;
+	}
+
+	.quote-result h3 {
+		font-size: 24px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 16px 0;
+	}
+
+	.quote-amount {
+		font-size: 48px;
+		font-weight: 700;
+		color: #10b981;
+		margin-bottom: 8px;
+	}
+
+	.quote-range {
+		color: #6b7280;
+		font-size: 14px;
+		margin-bottom: 24px;
+	}
+
+	.next-steps {
+		text-align: left;
+		margin-bottom: 24px;
+	}
+
+	.next-steps h4 {
+		font-size: 18px;
+		font-weight: 600;
+		color: #1f2937;
+		margin: 0 0 12px 0;
+	}
+
+	.next-steps ol {
+		padding-left: 20px;
+		margin: 0;
+	}
+
+	.next-steps li {
+		color: #4b5563;
+		margin-bottom: 4px;
+	}
+
+	.buyback-process {
+		padding: 80px 0;
+		background: #f9fafb;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	.section-header h2 {
+		font-size: 36px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 16px 0;
+	}
+
+	.section-header p {
+		font-size: 18px;
+		color: #6b7280;
+		margin: 0;
+	}
+
+	.process-steps {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 40px;
+	}
+
+	.step {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+		background: white;
+		padding: 32px;
+		border-radius: 16px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+	}
+
+	.step-number {
+		background: linear-gradient(135deg, #10b981, #059669);
+		color: white;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 20px;
+		font-weight: 700;
+		flex-shrink: 0;
+	}
+
+	.step-content h3 {
+		font-size: 20px;
+		font-weight: 600;
+		color: #1f2937;
+		margin: 0 0 8px 0;
+	}
+
+	.step-content p {
+		color: #6b7280;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.buyback-benefits {
+		padding: 80px 0;
+		background: white;
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 40px;
+	}
+
+	.benefit {
+		text-align: center;
+		padding: 32px;
+	}
+
+	.benefit-icon {
+		font-size: 48px;
+		margin-bottom: 16px;
+	}
+
+	.benefit h3 {
+		font-size: 20px;
+		font-weight: 600;
+		color: #1f2937;
+		margin: 0 0 12px 0;
+	}
+
+	.benefit p {
+		color: #6b7280;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.faq-section {
+		padding: 80px 0;
+		background: #f9fafb;
+	}
+
+	.faq-section h2 {
+		text-align: center;
+		font-size: 36px;
+		font-weight: 700;
+		color: #1f2937;
+		margin: 0 0 48px 0;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 32px;
+	}
+
+	.faq-item {
+		background: white;
+		padding: 32px;
+		border-radius: 16px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+	}
+
+	.faq-item h3 {
+		font-size: 18px;
+		font-weight: 600;
+		color: #1f2937;
+		margin: 0 0 12px 0;
+	}
+
+	.faq-item p {
+		color: #6b7280;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@keyframes slideIn {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 32px;
+		}
+
+		.calculator-wrapper {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.process-steps {
+			grid-template-columns: 1fr;
+		}
+
+		.step {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>
+
+<script>
+	const form = document.getElementById('buybackForm');
+	const quoteResult = document.getElementById('quoteResult');
+	const quoteAmount = document.getElementById('quoteAmount');
+
+	if (form && quoteResult && quoteAmount) {
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			
+			const brand = (document.getElementById('brand') as HTMLSelectElement)?.value;
+			const age = (document.getElementById('age') as HTMLSelectElement)?.value;
+			const condition = (document.getElementById('condition') as HTMLSelectElement)?.value;
+
+			let basePrice = 0;
+
+			// Base price calculation based on brand
+			const brandPrices = {
+				'hp': 15000,
+				'dell': 18000,
+				'lenovo': 16000,
+				'asus': 17000,
+				'acer': 14000,
+				'apple': 35000,
+				'other': 10000
+			};
+
+			basePrice = brandPrices[brand as keyof typeof brandPrices] || 10000;
+
+			// Age adjustment
+			const ageMultipliers = {
+				'0-1': 0.8,
+				'1-2': 0.65,
+				'2-3': 0.5,
+				'3-4': 0.35,
+				'4+': 0.2
+			};
+
+			basePrice *= ageMultipliers[age as keyof typeof ageMultipliers] || 0.2;
+
+			// Condition adjustment
+			const conditionMultipliers = {
+				'excellent': 1.0,
+				'good': 0.8,
+				'fair': 0.6,
+				'poor': 0.3
+			};
+
+			basePrice *= conditionMultipliers[condition as keyof typeof conditionMultipliers] || 0.3;
+
+			const finalPrice = Math.round(basePrice);
+			quoteAmount.textContent = `₹${finalPrice.toLocaleString('en-IN')}`;
+			quoteResult.classList.add('visible');
+			
+			quoteResult.scrollIntoView({ behavior: 'smooth' });
+		});
+	}
+</script>
