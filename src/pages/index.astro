@@ -3,6 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import LaptopCard from '../components/LaptopCard.astro';
+import Preloader from '../components/Preloader.astro';
+
+
+
+import 'swiper/element/bundle';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 
 const featuredLaptops = [
 	{
@@ -35,6 +45,8 @@ const featuredLaptops = [
 ---
 
 <Layout title="Lapx - Premium Laptops in Indore | Best Deals & Buy Back">
+<Preloader />
+
 	<Header />
 	
 	<main>
@@ -146,6 +158,13 @@ const featuredLaptops = [
 				</div>
 			</div>
 		</section>
+
+
+	
+
+
+
+
 	</main>
 
 	<Footer />
@@ -161,6 +180,15 @@ const featuredLaptops = [
 		margin: 0 auto;
 		padding: 0 24px;
 	}
+
+
+
+
+
+
+
+
+
 
 	/* Hero Section */
 	.hero {
@@ -431,6 +459,19 @@ const featuredLaptops = [
 		line-height: 1.6;
 		margin: 0;
 	}
+
+	.carousel {
+  max-width: 1200px;
+  margin: 60px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 	@media (max-width: 768px) {
 		.hero-content,
